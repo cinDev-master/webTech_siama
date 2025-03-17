@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siama Hotel - Resort Website</title>
+    <script src="bower_components/aos/dist/aos.js"></script> 
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for Playfair Display and Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', Georgia, serif; /* Default for headings */
+        }
+        .nav-link, button, p, #mobile-menu a {
+            font-family: 'Poppins', sans-serif; /* Poppins for nav, buttons, paragraphs */
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: white;
+            bottom: -4px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .hero {
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Scroll Animation Styles */
+        .scroll-hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Hero Section with Background Image -->
+    <div class="hero relative w-full brightness-75" style="background-image: url('https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/472232792_18380242999105937_125428910209257762_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGKp0vuFjo7xHko3bfla3dDcNvycqQrj75w2_JypCuPvmFyA2tlPJayG637RVh-J1TuSgHezFWgIJ3ftTWdD_GY&_nc_ohc=Sfo9iYsjE_QQ7kNvgHdyqAF&_nc_oc=AdgbqhhkkBPYVvzd3s48HuVwg91DOdoIQLjMFl_wobvS3ndp11QlgWDAx9SZJYuF4Rw&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=0QFTxE2Y_ux2FzbBK41k8w&oh=00_AYG0C5Gwz9U606m1T_jyGrjx4iOWVZTwackqWS9hH_Hz8Q&oe=67DB05B6');">
+        
+        <!-- Header/Navigation -->
+        <header class="relative z-10 w-full py-4 px-4 sm:px-8 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="h-12 w-12 sm:h-16 sm:w-16 bg-black flex items-center justify-center transform -skew-x-12">
+                    <div class="text-white text-[10px] sm:text-xs tracking-widest font-light transform skew-x-12">
+                        <div>S I A M A</div>
+                        <div class="text-center mt-1">H O T E L</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-4 lg:space-x-6">
+                    <li><a href="./index.html" class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Home</a></li>
+                    <li><a href="./src/Gallery.html" class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Gallery</a></li>
+                    <li><a href="./src/Restaurant.html" class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Restaurant</a></li>
+                    <li><a href="./src/Amenities.html" class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Amenities</a></li>
+                    <li><a href="./src/Accomadation.html" class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Accommodation</a></li>
+                    <li><a href="./src/Contact.html" class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl sm:text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Book a Room Button -->
+            <div class="hidden md:block">
+                <a href="./src/Booking.html" class="bg-gray-800 text-white px-4 py-2 text-sm lg:px-6 lg:py-3 tracking-widest hover:bg-gray-700 transition">BOOK NOW</a>
+            </div>
+        </header>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 h-full flex items-center justify-center px-4">
+            <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-center max-w-4xl leading-tight">
+                Welcome to Siama Hotel
+            </h1>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 absolute z-20 w-full py-4 top-[60px] sm:top-[72px]">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="/index.html" class="text-white text-sm font-bold hover:text-blue-400">Home</a></li>
+                <li><a href="./src/Gallery.html" class="text-white text-sm font-bold hover:text-blue-400">Gallery</a></li>
+                <li><a href="./src/Restaurant.html" class="text-white text-sm font-bold hover:text-blue-400">Restaurant</a></li>
+                <li><a href="./src/Amenities.html" class="text-white text-sm font-bold hover:text-blue-400">Amenities</a></li>
+                <li><a href="./src/Accomadation.html" class="text-white text-sm font-bold hover:text-blue-400">Accommodation</a></li>
+                <li><a href="./src/Contact.html" class="text-white text-sm font-bold hover:text-blue-400">Contact</a></li>
+                <li><a href="./src/Booking.html" class="bg-gray-800 text-white px-4 py-2 text-sm tracking-widest hover:bg-gray-700 transition">BOOK NOW</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Main Content Section -->
+    <section class="container mx-auto my-8 sm:my-12 lg:my-16 p-4 sm:p-5">
+        <!-- Introductory Text -->
+        <div class="text-center mb-8 sm:mb-10 lg:mb-12 scroll-hidden">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-800">Siama is the laid-back elegance of home.</h2>
+            <p class="text-gray-600 mt-3 sm:mt-4 max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-base">
+                Stay at Siama Hotel and leave the rush of urban living behind. This simple haven is a place to mindfully reconnect with one’s peace, spend time with friends and family, and immerse in the rhythms of nature. Welcome Home.
+            </p>
+        </div>
+    
+        <!-- Feature Boxes -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            <!-- Image Box One -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden scroll-hidden">
+                <img src="./src/images/img2.webp"
+                    alt="Feature One Image" class="w-full h-48 sm:h-60 object-cover">
+            </div>
+
+            <!-- Image Box Two -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden scroll-hidden">
+                <img src="./src/images/img1.webp"
+                    alt="Feature Two Image" class="w-full h-48 sm:h-60 object-cover">
+            </div>
+
+            <!-- Image Box Three -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden scroll-hidden">
+                <img src="./src/images/img3.webp"
+                    alt="Feature Three Image" class="w-full h-48 sm:h-60 object-cover">
+            </div>
+        </div>
+
+        <!-- Amenities Description -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 mt-8 sm:mt-12 lg:mt-16">
+            <div class="scroll-hidden">
+                <p class="text-sm sm:text-base leading-relaxed text-gray-700">
+                    Nestled along the single-street sitio of San Lorenzo in Sorsogon City, in the midst of an old coconut plantation with towering fruiting trees of the region, Siama Hotel hosts 30 bespoke rooms with modern Filipino interiors, a quaint restaurant that anchors its cuisine on the local region’s fare, and a lush garden of tropical flora and fauna sure to tickle the nature-lover’s fancy.
+                </p>
+            </div>
+            <div class="scroll-hidden">
+                <p class="text-sm sm:text-base leading-relaxed text-gray-700">
+                    Stay at Siama Hotel and leave the rush of urban living behind. This simple haven is a place to mindfully reconnect with one’s peace, spend time with friends and family, and immerse in the rhythms of nature. Welcome to Your Home in Sorsogon.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 sm:py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+                <div>
+                    <h3 class="text-lg sm:text-xl font-light mb-4">Siama Hotel</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm">Sitio San Lorenzo, Bibincahan,<br>Sorsogon City, Sorsogon<br>Philippines, 4700</p>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg font-light mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400 text-xs sm:text-sm">
+                        <li><a href="/index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="./src/pages/Restaurant.html" class="hover:text-white transition">Restaurant</a></li>
+                        <li><a href="./src/pages/Amenities.html" class="hover:text-white transition">Amenities</a></li>
+                        <li><a href="./src/pages/Accomadation.html" class="hover:text-white transition">Accommodation</a></li>
+                        <li><a href="./src/pages/Gallery.html" class="hover:text-white transition">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg font-light mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400 text-xs sm:text-sm">
+                        <li><i class="fas fa-phone mr-2"></i> +63 917 881 6497</li>
+                        <li><i class="fas fa-phone mr-2"></i> +63 998 982 8101</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@siamahotel.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg font-light mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle and Scroll Animation -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll Animation with Intersection Observer
+        const scrollElements = document.querySelectorAll('.scroll-hidden');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.2 // Trigger when 20% of the element is visible
+        });
+
+        scrollElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siama Hotel - Laid Back Elegance</title>
+    
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./output.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts for Playfair Display and Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .nav-link, button, p, #mobile-menu a {
+            font-family: 'Poppins', sans-serif;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: white;
+            bottom: -4px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .hero {
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+        /* Scroll animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Hero Section with Background Image -->
+    <div class="hero relative w-full brightness-75" style="background-image: url('https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/472232792_18380242999105937_125428910209257762_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGKp0vuFjo7xHko3bfla3dDcNvycqQrj75w2_JypCuPvmFyA2tlPJayG637RVh-J1TuSgHezFWgIJ3ftTWdD_GY&_nc_ohc=Sfo9iYsjE_QQ7kNvgHdyqAF&_nc_oc=AdgbqhhkkBPYVvzd3s48HuVwg91DOdoIQLjMFl_wobvS3ndp11QlgWDAx9SZJYuF4Rw&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=0QFTxE2Y_ux2FzbBK41k8w&oh=00_AYG0C5Gwz9U606m1T_jyGrjx4iOWVZTwackqWS9hH_Hz8Q&oe=67DB05B6');">
+        <!-- Header/Navigation -->
+        <header class="relative z-10 w-full py-6 px-8 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="h-16 w-16 bg-black flex items-center justify-center transform -skew-x-12">
+                    <div class="text-white text-xs tracking-widest font-light transform skew-x-12">
+                        <div>S I A M A</div>
+                        <div class="text-center mt-1">H O T E L</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:block">
+                <ul class="flex items-center space-x-4">
+                    <li><a href="../index.html" class="nav-link text-white font-bold hover:text-blue-400">Home</a></li>
+                    <li><a href="Gallery.html" class="nav-link text-blue-400 font-bold hover:text-blue-400 border-b-2 border-white">Gallery</a></li>
+                    <li><a href="Restaurant.html" class="nav-link text-white font-bold hover:text-blue-400">Restaurant</a></li>
+                    <li><a href="Amenities.html" class="nav-link text-white font-bold hover:text-blue-400">Amenities</a></li>
+                    <li><a href="Accomadation.html" class="nav-link text-white font-bold hover:text-blue-400">Accomodation</a></li>
+                    <li><a href="Contact.html" class="nav-link text-white font-bold hover:text-blue-400">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Book a Room Button -->
+            <div class="hidden md:block">
+                <a href="Booking.html" class="bg-gray-800 text-white px-6 py-3 tracking-widest hover:bg-gray-700 transition">BOOK NOW</a>
+            </div>
+        </header>
+
+        <!-- Mobile Navigation (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 absolute z-20 w-full py-4">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="../index.html" class="text-white font-bold hover:text-blue-400">Home</a></li>
+                <li><a href="Gallery.html" class="text-blue-400 font-bold hover:text-blue-400 border-b-2 border-white">Gallery</a></li>
+                <li><a href="Restaurant.html" class="text-white font-bold hover:text-blue-400">Restaurant</a></li>
+                <li><a href="Amenities.html" class="text-white font-bold hover:text-blue-400">Amenities</a></li>
+                <li><a href="Accomadation.html" class="text-white font-bold hover:text-blue-400">Accomodation</a></li>
+                <li><a href="Contact.html" class="text-white font-bold hover:text-blue-400">Contact</a></li>
+                <li><a href="Booking.html" class="bg-gray-800 text-white px-6 py-3 tracking-widest hover:bg-gray-700 transition">BOOK NOW</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <section class="relative h-96 fade-in">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')"></div>
+        <div class="absolute inset-0 bg-opacity-50"></div>
+        <div class="container mx-auto h-full flex items-center justify-center relative z-10">
+            <div class="text-center text-white">
+                <h3 class="text-2xl md:text-3xl font-light mb-4">
+                    “Taking pictures is savoring life intensely, every hundredth of a second.”<br>— Marc Riboud
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-light text-center mb-12 fade-in">Our Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Room with Ocean View -->
+                <div class="relative overflow-hidden group rounded-lg shadow-lg h-64 fade-in">
+                    <img src="https://images.squarespace-cdn.com/content/v1/527b4da9e4b0fe10defc787f/36f593d1-a863-4e19-ab45-b924a8bfa10d/IMG_1422.jpg?format=1000w" alt="Ocean View Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h4 class="text-lg font-semibold">Room with Ocean View</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Spa Treatment -->
+                <div class="relative overflow-hidden group rounded-lg shadow-lg h-64 fade-in">
+                    <img src="https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/476094059_648032067884617_5520679028265369347_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGo1ZZnMlzzTTuW5r2q0lIAhiIDQRImjqmGIgNBEiaOqdJbGx1Pda3MqteNB3B7yAiqjptMJKOpj9hfYugeq_RI&_nc_ohc=gTADE6aMdWsQ7kNvgEQo0j2&_nc_oc=AdiF7OkPP-EtyRhuM-5ssVgRf9AHeiNzBU5hS9E53cKUWB-ejkILI595kXYrzxubxcY&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=K1FIRM11n73VX6gW3v3gzA&oh=00_AYHdzM4L71SvER-Vghu9J3nv-RTfUNvjskOUlRbh2d8ukA&oe=67DBFEA3" alt="Spa Treatment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h4 class="text-lg font-semibold">Spa Treatment</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Garden Terrace -->
+                <div class="relative overflow-hidden group rounded-lg shadow-lg h-64 fade-in">
+                    <img src="https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/300381952_5315873931823956_943389491864446934_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3a1ebe&_nc_eui2=AeG9tVgdDeXvgsqOh6hMchue9EzUHCBB1EP0TNQcIEHUQ_D92ypQFamDkVX-kFy5o2rUDdJl_aztCxGAzaf7og9P&_nc_ohc=tAngu2o4cXQQ7kNvgFjC7HL&_nc_oc=AdjQLKMkqLsvhm5rcgX-853np6XMVX_SedvkHfOcdQTpnthGQdyv1oJxrzHbswJQQIE&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=BQeSjGaD8V1M9-JY-CKyLg&oh=00_AYFO8MFelvMJQHfAl00X3W_P5fsvwswDrCpabl6PdEoRyA&oe=67DBF6B4" alt="Garden Terrace" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h4 class="text-lg font-semibold">Garden Terrace</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gourmet Restaurant -->
+                <div class="relative overflow-hidden group rounded-lg shadow-lg h-64 fade-in">
+                    <img src="https://images.squarespace-cdn.com/content/v1/527b4da9e4b0fe10defc787f/5a6e98cd-b76f-48c2-8245-53bfb5699936/IMG_1491.jpg?format=1000w" alt="Restaurant" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h4 class="text-lg font-semibold">Gourmet Restaurant</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Luxury Bath -->
+                <div class="relative overflow-hidden group rounded-lg shadow-lg h-64 fade-in">
+                    <img src="https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/252455110_4422732007804824_694006328809068472_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3a1ebe&_nc_eui2=AeHyzE9-SqRAeahV1NR-rjsJL7oZdi9P7Awvuhl2L0_sDEEgQUp_Mv7bSNLW-pkvygJkjXon_4MHmMGG1ow9NDDW&_nc_ohc=OeedLjrXr94Q7kNvgHJhGws&_nc_oc=Adi8e293p_4x7-L1S9lyAAK4QKoUiE6FNbZbBBsQiORaMeW8gEfXuPEakxsSzHPoNeY&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=1vtQp4XFILpl7L5i95Dekg&oh=00_AYEzcHhcz06dqw7noTTPFK9PNyi6JjPZDGMzUAvmVIovcg&oe=67DC2746" alt="Luxury Bath" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h4 class="text-lg font-semibold">Luxury Bath</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Swimming Pool -->
+                <div class="relative overflow-hidden group rounded-lg shadow-lg h-64 fade-in">
+                    <img src="https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/464495769_8464617846949533_8446774458469689275_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0b6b33&_nc_eui2=AeFkcHTL8axMEvoFFLVaL7j2Wy7t5Rr_arVbLu3lGv9qtX4M6M6lqubXg9jXLH1MLF7vX3mI_Wqo2U3GOaejbzZL&_nc_ohc=MMcm7yB7YQYQ7kNvgHFmYJc&_nc_oc=AdjBW36f2EsxDaiMlkA6TQFvTjhvanL2bLiShOLCtYLGifaMKQcyysk-jKRxPTfoy-o&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=RWx9dD8jKIU2J5A_p2XsLw&oh=00_AYHzJUOek5uFW0iGT_wOw5Vgn09W7JMAjgs6jOIMLUsG8Q&oe=67DC210F" alt="Swimming Pool" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h4 class="text-lg font-semibold">Swimming Pool</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Corridor -->
+                <div class="relative overflow-hidden group rounded-lg shadow-lg h-64 fade-in">
+                    <img src="https://images.squarespace-cdn.com/content/v1/527b4da9e4b0fe10defc787f/e2b3e74e-ebb8-4818-a3b1-834044903d39/IMG_1437.jpg?format=1000w" alt="Corridor" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h4 class="text-lg font-semibold">Corridor</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Living Space -->
+                <div class="relative overflow-hidden group rounded-lg shadow-lg h-64 fade-in">
+                    <img src="https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/323378676_1122125671834490_11045171920699334_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=3a1ebe&_nc_eui2=AeF0BtJxs6lzdyMjBG7ZLFFXE2t8aN6TAkATa3xo3pMCQKXRqpysnUA9X5pgkpCRwqH08qHge4-5uE6-XUH3CjcY&_nc_ohc=-A-GvEIt0eAQ7kNvgENw8i2&_nc_oc=Adgt_Z5cJuaSrwxKEUmJ_TdlnwsBkXmIIcqetvt1lrUBzVf3_5_hqXapgEQj0ApPqbw&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=9n8p0U2p_TL62UXI3gNMQQ&oh=00_AYH949oX0FmG-8eb1UQ9BoywXhkdwGtc31VFNWyk_WOSGg&oe=67DC0209" alt="Living Space" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h4 class="text-lg font-semibold">Living Space</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Living Space -->
+                <div class="relative overflow-hidden group rounded-lg shadow-lg h-64 fade-in">
+                    <img src="https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/480484086_9102875029790475_2157308726672858673_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGjsOrLxUqp4rWFh4GK4P_Xn43RdV_7KqKfjdF1X_sqohHJPBG3owHB1A_92Z414smnvoaOHTqDJ9mMg4SISEtx&_nc_ohc=YcpBjNtlXtIQ7kNvgFF4eC6&_nc_oc=Adj0p3jE-7yGNUood-OO8HUSCa8VSibkK5JKkUkxq09CoNji38SO3JHcFltdaSOtuNI&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=lQCRaKZBM9lqhiOX4oLRQQ&oh=00_AYGtQt9L0h0k_sTGHjH0u74wOQbRk57tLYKhy2fwjw6zJQ&oe=67DC0F15" alt="Additional Living Space" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h4 class="text-lg font-semibold">Additional Living Space</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gray-800 text-white fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-light mb-6">Experience the Ultimate Luxury</h2>
+            <p class="max-w-2xl mx-auto mb-8">Indulge in our world-class amenities, exceptional service, and unforgettable experiences at Siama Hotel.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="./src/pages/Booking.html" class="bg-white text-gray-800 px-6 py-3 font-semibold tracking-widest hover:bg-gray-200 transition">Book Now</a>
+                <a href="./src/pages/Contact.html" class="border border-white text-white px-6 py-3 font-semibold tracking-widest hover:bg-white hover:text-gray-800 transition">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 fade-in">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-light mb-4">Siama Hotel</h3>
+                    <p class="text-gray-400 text-sm">Sitio San Lorenzo, Bibincahan,<br>Sorsogon City, Sorsogon<br>Philippines, 4700</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-light mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="./index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="./src/pages/Accomadation.html" class="hover:text-white transition">Rooms & Suites</a></li>
+                        <li><a href="./src/pages/Restaurant.html" class="hover:text-white transition">Dining</a></li>
+                        <li><a href="./src/pages/Amenities.html" class="hover:text-white transition">Spa & Wellness</a></li>
+                        <li><a href="./src/pages/Gallery.html" class="hover:text-white transition">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-light mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><i class="fas fa-phone mr-2"></i> +63 123 456 7890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@siamahotel.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-light mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle and Scroll Animation -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll Animation
+        const faders = document.querySelectorAll('.fade-in');
+
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>

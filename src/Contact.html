@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siama Hotel - Contact Us</title>
+    <!-- Tailwind CSS (latest version via CDN) -->
+    <link rel="stylesheet" href="./output.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for Playfair Display and Poppins -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', Georgia, serif;
+            /* Default for headings */
+        }
+
+        .nav-link,
+        button,
+        p,
+        #mobile-menu a,
+        label {
+            font-family: 'Poppins', sans-serif;
+            /* Poppins for nav, buttons, paragraphs, labels */
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: white;
+            bottom: -4px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .hero {
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Define the animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply the animation to elements with the class .scroll-animation */
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        /* When the element is in the viewport, add this class */
+        .in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Hero Section with Background Image -->
+    <div class="hero relative w-full brightness-75"
+        style="background-image: url('https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/472232792_18380242999105937_125428910209257762_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGKp0vuFjo7xHko3bfla3dDcNvycqQrj75w2_JypCuPvmFyA2tlPJayG637RVh-J1TuSgHezFWgIJ3ftTWdD_GY&_nc_ohc=MY8XVV4ZDvcQ7kNvgHsDjfY&_nc_oc=Adiw_3CNqEkJOCd-BxdobkYfsR8oQ0dHtG0O1a3Li__4VvIoH54b52cYscaapsrxYqI&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=cclkl8h0_bqGxiRSk8yPYg&oh=00_AYGj_lVU6Wz9AUj8C8tT8WzftTEYUln3idfKN2G3tGPQ2w&oe=67DBE6B6');">
+
+        <!-- Header/Navigation -->
+        <header class="relative z-10 w-full py-4 px-4 sm:px-8 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="h-12 w-12 sm:h-16 sm:w-16 bg-black flex items-center justify-center transform -skew-x-12">
+                    <div class="text-white text-[10px] sm:text-xs tracking-widest font-light transform skew-x-12">
+                        <div>S I A M A</div>
+                        <div class="text-center mt-1">H O T E L</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-4 lg:space-x-6">
+                    <li><a href="../index.html"
+                            class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Home</a></li>
+                    <li><a href="Gallery.html"
+                            class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Gallery</a>
+                    </li>
+                    <li><a href="Restaurant.html"
+                            class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Restaurant</a>
+                    </li>
+                    <li><a href="Amenities.html"
+                            class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Amenities</a>
+                    </li>
+                    <li><a href="Accomadation.html"
+                            class="nav-link text-white text-sm lg:text-base font-bold hover:text-blue-400">Accomodation</a>
+                    </li>
+                    <li><a href="Contact.html"
+                            class="nav-link text-blue-400 text-sm lg:text-base font-bold border-b-2 border-white">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl sm:text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Book a Room Button -->
+            <div class="hidden md:block">
+                <a href="Booking.html"
+                    class="bg-gray-800 text-white px-4 py-2 text-sm lg:px-6 lg:py-3 tracking-widest hover:bg-gray-700 transition">BOOK
+                    NOW</a>
+            </div>
+        </header>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 h-full flex items-center justify-center px-4">
+            <h1
+                class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-center max-w-4xl leading-tight">
+                Contact Information
+            </h1>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 absolute z-20 w-full py-4 top-[60px] sm:top-[72px]">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="../index.html" class="text-white text-sm font-bold hover:text-blue-400">Home</a></li>
+                <li><a href="Gallery.html" class="text-white text-sm font-bold hover:text-blue-400">Gallery</a></li>
+                <li><a href="Restaurant.html" class="text-white text-sm font-bold hover:text-blue-400">Restaurant</a>
+                </li>
+                <li><a href="Amenities.html" class="text-white text-sm font-bold hover:text-blue-400">Amenities</a></li>
+                <li><a href="Accomadation.html"
+                        class="text-white text-sm font-bold hover:text-blue-400">Accomodation</a></li>
+                <li><a href="Contact.html" class="text-blue-400 text-sm font-bold border-b-2 border-white">Contact</a>
+                </li>
+                <li><a href="Booking.html"
+                        class="bg-gray-800 text-white px-4 py-2 text-sm tracking-widest hover:bg-gray-700 transition">BOOK
+                        NOW</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="py-8 sm:py-12 lg:py-16 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-light text-center text-gray-800 mb-8 sm:mb-10 lg:mb-12">
+                Contact Us</h2>
+
+            <div class="flex flex-col gap-8">
+                <!-- Contact Info -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="text-center p-4 sm:p-6 bg-white shadow rounded scroll-animation">
+                        <div class="inline-block p-4 rounded-full bg-gray-100 mb-4">
+                            <i class="fas fa-map-marker-alt text-amber-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-medium mb-2 text-sm sm:text-base">Our Location</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm">Siama Hotel, Sitio San Lorenzo, Bibincahan, Sorsogon
+                            City, Sorsogon, Philippines 4700</p>
+                    </div>
+
+                    <div class="text-center p-4 sm:p-6 bg-white shadow rounded scroll-animation">
+                        <div class="inline-block p-4 rounded-full bg-gray-100 mb-4">
+                            <i class="fas fa-phone text-amber-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-medium mb-2 text-sm sm:text-base">Our Phone</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm">+63 917 881 6497<br>+63 998 982 8101</p>
+                    </div>
+
+                    <div class="text-center p-4 sm:p-6 bg-white shadow rounded scroll-animation">
+                        <div class="inline-block p-4 rounded-full bg-gray-100 mb-4">
+                            <i class="fas fa-envelope text-amber-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-medium mb-2 text-sm sm:text-base">Our Email</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm">siama.hotel@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form and Map -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <!-- Google Map -->
+                    <div class="flex-1 h-[400px] sm:h-[500px] md:h-[600px] scroll-animation">
+                        <div class="h-full w-full rounded overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.6235097452663!2d124.0161184497351!3d13.004122459949523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a0d500f5772aff%3A0x25cc55604de2fc12!2sSiama+Hotel!5e0!3m2!1sen!2sph!4v1692097123456!5m2!1sen!2sph"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="flex-1 bg-white shadow rounded p-6 scroll-animation">
+                        <h3 class="text-xl font-light mb-6">Send a Message</h3>
+                        <form id="contactForm">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="name" class="block text-sm text-gray-700 mb-1">Your Name</label>
+                                    <input type="text" id="name" name="name"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-amber-600"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm text-gray-700 mb-1">Your Email</label>
+                                    <input type="email" id="email" name="email"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-amber-600"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-sm text-gray-700 mb-1">Subject</label>
+                                <input type="text" id="subject" name="subject"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-amber-600"
+                                    required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm text-gray-700 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="5"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-amber-600"
+                                    required></textarea>
+                            </div>
+                            <button type="submit"
+                                class="bg-amber-600 text-white px-6 py-3 rounded hover:bg-amber-700 transition tracking-widest text-sm">SEND
+                                MESSAGE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-8 sm:py-12 lg:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-light text-center text-gray-800 mb-8 sm:mb-10 lg:mb-12">
+                Frequently Asked Questions</h2>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded scroll-animation">
+                        <button
+                            class="faq-btn flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 transition">
+                            <span class="font-medium">What are your check-in and check-out times?</span>
+                            <i class="fas fa-chevron-down text-amber-600 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-4 border-t">
+                            <p class="text-gray-600">Our standard check-in time is 2:00 PM and check-out time is 12:00
+                                PM. Early check-in and late check-out may be available upon request, subject to
+                                availability and additional charges may apply.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded scroll-animation">
+                        <button
+                            class="faq-btn flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 transition">
+                            <span class="font-medium">Do you offer airport transfers?</span>
+                            <i class="fas fa-chevron-down text-amber-600 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-4 border-t">
+                            <p class="text-gray-600">Yes, we offer airport transfer services at an additional cost.
+                                Please provide your flight details at least 24 hours prior to arrival so we can arrange
+                                your transportation.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded scroll-animation">
+                        <button
+                            class="faq-btn flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 transition">
+                            <span class="font-medium">Is breakfast included with the room?</span>
+                            <i class="fas fa-chevron-down text-amber-600 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-4 border-t">
+                            <p class="text-gray-600">Yes, our room rates include complimentary breakfast served at our
+                                restaurant from 6:30 AM to 10:00 AM daily.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded scroll-animation">
+                        <button
+                            class="faq-btn flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 transition">
+                            <span class="font-medium">Do you have Wi-Fi available?</span>
+                            <i class="fas fa-chevron-down text-amber-600 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden p-4 border-t">
+                            <p class="text-gray-600">Yes, we provide complimentary high-speed Wi-Fi access throughout
+                                the hotel for all our guests.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Hotel Info -->
+                <div>
+                    <div
+                        class="h-12 w-12 sm:h-14 sm:w-14 bg-black flex items-center justify-center transform -skew-x-12 mb-4">
+                        <div class="text-white text-[10px] sm:text-xs tracking-widest font-light transform skew-x-12">
+                            <div>S I A M A</div>
+                            <div class="text-center mt-1">H O T E L</div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-4">Experience luxury and comfort in the heart of Sorsogon City.
+                        Our hotel offers the perfect blend of modern amenities with Filipino hospitality.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com/SiamaHotel" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/SiamaHotel" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/SiamaHotel" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="../index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="Gallery.html" class="hover:text-white transition">Gallery</a></li>
+                        <li><a href="Restaurant.html" class="hover:text-white transition">Restaurant</a></li>
+                        <li><a href="Amenities.html" class="hover:text-white transition">Amenities</a></li>
+                        <li><a href="Accomadation.html" class="hover:text-white transition">Accomodation</a></li>
+                        <li><a href="Contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Subscribe to Newsletter</h3>
+                    <p class="text-sm text-gray-300 mb-4">Stay updated with our latest offers and news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email"
+                            class="flex-1 px-3 py-2 text-gray-800 focus:outline-none">
+                        <button type="submit" class="bg-amber-600 text-white px-4 hover:bg-amber-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
+                <p>© 2025 Siama Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+
+                // Toggle content
+                content.classList.toggle('hidden');
+
+                // Toggle icon
+                icon.classList.toggle('rotate-180');
+
+                // Close other FAQs
+                document.querySelectorAll('.faq-btn').forEach(otherButton => {
+                    if (otherButton !== button) {
+                        otherButton.nextElementSibling.classList.add('hidden');
+                        otherButton.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+
+        // Scroll animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+
+            const elementInView = (el, percentageScroll = 100) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <=
+                    ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll / 100))
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('in-view');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 90)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+
+            // Initialize on load
+            handleScrollAnimation();
+
+            // Add scroll event
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+        });
+    </script>
+</body>
+
+</html>
